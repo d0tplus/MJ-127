@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://ke55vgia5etm"]
+[gd_scene load_steps=2 format=3 uid="uid://ke55vgia5etm"]
+
+[ext_resource type="PackedScene" uid="uid://bnpqx256vco0v" path="res://src/core/upgrades/Option.tscn" id="1_jp07g"]
 
 [node name="UpgradeDisplay" type="Control"]
 layout_mode = 3
@@ -9,49 +11,40 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 1.01251)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="Title" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.483
-anchor_top = 0.469
-anchor_right = 0.517
-anchor_bottom = 0.531
-offset_left = -45.416
-offset_top = 0.0879822
-offset_right = 91.416
-offset_bottom = -0.0880127
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -93.0
+offset_top = 106.666
+offset_right = 100.0
+offset_bottom = 132.666
+grow_horizontal = 2
+text = "CHoose Your Upgrade"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.5
+offset_top = -175.0
+offset_right = 287.5
+offset_bottom = 175.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
-layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 75
 alignment = 1
 
-[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/HBoxContainer"]
+[node name="Option" parent="HBoxContainer2" instance=ExtResource("1_jp07g")]
 layout_mode = 2
-region_rect = Rect2(50, 50, 50, 50)
 
-[node name="Label" type="Label" parent="HBoxContainer/HBoxContainer/NinePatchRect"]
-layout_mode = 2
-offset_left = 304.0
-offset_top = 7.0
-offset_right = 367.0
-offset_bottom = 33.0
-text = "Sdsdsds"
-
-[node name="NinePatchRect2" type="NinePatchRect" parent="HBoxContainer/HBoxContainer"]
-layout_mode = 2
-region_rect = Rect2(50, 50, 50, 50)
-
-[node name="Label" type="Label" parent="HBoxContainer/HBoxContainer/NinePatchRect2"]
-layout_mode = 2
-offset_left = 304.0
-offset_top = 7.0
-offset_right = 367.0
-offset_bottom = 33.0
-text = "Sdsdsds"
-
-[node name="Padding" type="Control" parent="HBoxContainer/HBoxContainer"]
+[node name="Option2" parent="HBoxContainer2" instance=ExtResource("1_jp07g")]
 layout_mode = 2
